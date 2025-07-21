@@ -1,46 +1,22 @@
-# Project: Detecting Suspicious Login Attempts Using Splunk SIEM
+# 🛡️ Manisha Luthra | Cybersecurity Portfolio
 
-## Overview
-This simulated cybersecurity project demonstrates how a SOC (Security Operations Center) Analyst can detect brute-force login attempts using Splunk SIEM. It involves analyzing failed login events, identifying suspicious IPs, creating alerts, and documenting incident response steps.
+Welcome to my cybersecurity portfolio. I'm transitioning from a strong technical support background into the cybersecurity domain. Here, you'll find self-created, hands-on security projects that demonstrate my growing expertise in threat detection, SIEM, and SOC operations.
 
-## Tools Used
-- Splunk SIEM (Simulated)
-- Windows Security Logs (Event ID 4625)
+---
 
-## Objectives
-- Monitor failed login attempts using Event ID 4625
-- Create detection rules and alerts in Splunk
-- Identify potentially malicious IP addresses
-- Recommend incident response and remediation steps
+## 🔍 Projects
 
-## Key Detection Logic
-```spl
-sourcetype="WinEventLog:Security" EventCode=4625 
-| stats count by src_ip, user 
-| where count > 10
-```
+### 🚨 [Detecting Suspicious Login Attempts Using Splunk SIEM](https://github.com/manishaluthra12/manishaluthra12.github.io/tree/main/projects/splunk-bruteforce)
 
-## Screenshots
-📸 **Included in repository**:
-- Splunk Dashboard - Failed Logins by IP
-- Splunk Alert Configuration Screen
-- Sample Alert Trigger
+- Simulated a brute-force attack detection using Splunk and Windows event logs  
+- Created detection rules using Event ID 4625  
+- Built Splunk alerts and dashboards  
+- Recommended incident response steps  
+- Included screenshots & project documentation
 
-## Incident Response Plan
-- Investigate source IP via OSINT (e.g., VirusTotal, AbuseIPDB)
-- Disable or lock compromised user accounts
-- Notify IT/Security teams
-- Add IP to blocklist or firewall
-- Educate users if phishing involved
+---
 
-## Outcome
-This project demonstrates core skills required in entry-level SOC Analyst roles:
-- Log analysis
-- Alert creation
-- MITRE ATT&CK understanding
-- Writing IR documentation
+More cybersecurity labs and real-world use cases coming soon.
 
-## Author
-Manisha Luthra  
 [LinkedIn](https://www.linkedin.com/in/manishaluthra12)  
 📧 manishaluthra03@gmail.com
